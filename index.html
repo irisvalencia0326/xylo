@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Bantay-Layag Monitoring Dashboard</title>
+
+    <!-- Tailwind CDN (quick) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Local styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-900 text-white">
+    <!-- Header omitted for brevity (same as previous) -->
+
+    <div class="container mx-auto px-4 py-6">
+        <!-- Alerts, Map, Stats omitted for brevity -->
+
+        <!-- Weather Forecast Section -->
+        <div class="mt-6 bg-blue-950/50 backdrop-blur rounded-xl border border-cyan-500/30 p-6" id="weather-section">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="16" y1="13" x2="16" y2="21"></line>
+                    <line x1="8" y1="13" x2="8" y2="21"></line>
+                    <line x1="12" y1="15" x2="12" y2="23"></line>
+                    <path d="M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25"></path>
+                </svg>
+                Weather Forecast - Baras, Catanduanes
+            </h2>
+
+            <!-- Top summary (will be updated by JS) -->
+            <div id="weather-summary" class="bg-blue-900/50 rounded-lg p-4 border border-cyan-500/20 mb-4">
+                <p class="text-sm text-cyan-300 mb-2">Current</p>
+                <p id="weather-condition" class="text-2xl font-bold">Loading...</p>
+                <p id="weather-temp" class="text-sm text-cyan-300 mt-1">--°C</p>
+            </div>
+
+            <!-- Forecast / readings grid (values updated by JS) -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4" id="weather-cards">
+                <div id="card-1" class="bg-blue-900/50 rounded-lg p-4 border border-cyan-500/20">
+                    <p class="text-sm text-cyan-300 mb-2">Now</p>
+                    <p id="card-1-main" class="font-semibold">--</p>
+                    <p id="card-1-sub" class="text-sm">--</p>
+                </div>
+                <div id="card-2" class="bg-blue-900/50 rounded-lg p-4 border border-cyan-500/20">
+                    <p class="text-sm text-cyan-300 mb-2">Temperature</p>
+                    <p id="card-2-main" class="font-semibold">-- °C</p>
+                    <p id="card-2-sub" class="text-sm">Humidity: --%</p>
+                </div>
+                <div id="card-3" class="bg-blue-900/50 rounded-lg p-4 border border-cyan-500/20">
+                    <p class="text-sm text-cyan-300 mb-2">Pressure</p>
+                    <p id="card-3-main" class="font-semibold">-- hPa</p>
+                    <p id="card-3-sub" class="text-sm">Altitude: -- m</p>
+                </div>
+                <div id="card-4" class="bg-blue-900/50 rounded-lg p-4 border border-cyan-500/20">
+                    <p class="text-sm text-cyan-300 mb-2">Rain</p>
+                    <p id="card-4-main" class="font-semibold">--</p>
+                    <p id="card-4-sub" class="text-sm">Analog: --</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer omitted for brevity -->
+
+    <!-- Local script -->
+    <script src="js/main.js"></script>
+</body>
+</html>
